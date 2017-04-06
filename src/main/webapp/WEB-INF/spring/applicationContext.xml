@@ -24,14 +24,33 @@
 			<value>jdbc:oracle:thin:@localhost:1521:xe</value>
 		</property>
 		<property name="username">
-			<value>seongseokwon</value>
+			<value>movie</value>
 		</property>
 		<property name="password">
-			<value>seokwon</value>
+			<value>movie</value>
 		</property>
 	</bean>
 
-
+		<!--  메일  -->
+		<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+			<property name="host" value="smtp.gmail.com"/>
+			<property name="port" value="587"/>
+			<property name="username" value="dandiee94@gmail.com"/>
+			<property name="password" value="tjrdnjsdl94"/>
+			<property name="javaMailProperties">
+				<props>
+					<prop key="mail.smtp.auth">true</prop>
+					<prop key="mail.smtp.starttls.enable">true</prop>
+					<prop key="mail.smtp.EnableSSL.enable">true</prop>
+					<prop key="mail.smtp.timeout">8500</prop>
+					<prop key="mail.debug">true</prop>
+				</props>
+			</property>
+		</bean>
+		<bean id="mailService" class="first.project.movie.mail.service.MailServiceImpl">
+			<property name="javaMailSender" ref="javaMailSender"/>
+		</bean>
+		
 	<!-- Transaction 관리자 설정 -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
@@ -39,12 +58,12 @@
 
 
 	<!-- myBatis 사용을 위한 설정 -->
-	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:/mybatis-config.xml" />
 	</bean>
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean" />
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
 

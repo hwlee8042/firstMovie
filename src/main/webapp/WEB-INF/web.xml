@@ -1,89 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-
-	<!-- The definition of the Root Spring Container shared by all Servlets 
-		and Filters -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>
-			/WEB-INF/spring/applicationContext.xml
-			<!--  추가적으로 사용할 컨텍스트를 등록 -->
-		</param-value>
-	</context-param>
-
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-
-
-	<filter>
-		<filter-name>encodingFilter</filter-name>
-		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-		<init-param>
-			<param-name>encoding</param-name>
-			<param-value>UTF-8</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>encodingFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	<!-- Processes application requests -->
-	
-	<servlet>
-		<servlet-name>spring</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>
-			/WEB-INF/spring/appServlet/servlet-context.xml
-			
-			<!--  아래처럼 각팀원들이 만들 컨텍스트를 등록하면 됩니다. -->
-			</param-value>
-		</init-param>
-		<load-on-startup>0</load-on-startup>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>custom</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+     		/WEB-INF/spring/applicationContext.xml
+     	</param-value>
+  </context-param>
+  <listener>
+    <listener-class>
+     		org.springframework.web.context.ContextLoaderListener
+    	</listener-class>
+  </listener>
+  
+  <!-- Custom -->
+  <servlet>
+    <servlet-name>custom</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>
 			/WEB-INF/spring/customContext/custom-Context.xml
-			
-			<!--  아래처럼 각팀원들이 만들 컨텍스트를 등록하면 됩니다. -->
+			/WEB-INF/spring/customContext/memberContext.xml
+			/WEB-INF/spring/customContext/reviewContext.xml					
+			/WEB-INF/spring/customContext/faqContext.xml			
+			/WEB-INF/spring/adminContext/newsContext.xml
+			<!-- /WEB-INF/spring/customContext/moviechartContext.xml -->
+			<!-- /WEB-INF/spring/customContext/ticketContext.xml -->			
 			</param-value>
-		</init-param>
-		<load-on-startup>0</load-on-startup>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>custom</servlet-name>
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>admin</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>
-				/WEB-INF/spring/adminContext/admin-Context.xml
-				<!--  아래에 팀원들이 만들 컨텍스트를 등록하면 됩니다. -->
-			</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>admin</servlet-name>
-		<url-pattern>*.mdo</url-pattern>
-	</servlet-mapping>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>custom</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Admin -->
+  <servlet>
+    <servlet-name>admin</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>
+			/WEB-INF/spring/adminContext/admin-Context.xml
+			/WEB-INF/spring/adminContext/movieContext.xml
+			/WEB-INF/spring/adminContext/newsContext.xml
+			<!-- /WEB-INF/spring/adminContext/roomContext.xml
+			/WEB-INF/spring/adminContext/moviePlayContext.xml -->
+		</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>admin</servlet-name>
+    <url-pattern>*.mdo</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- UTF-8 -->
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- Index
+  <welcome-file-list>
+    <welcome-file>main.jsp</welcome-file>
+  </welcome-file-list>
+	-->
 </web-app>

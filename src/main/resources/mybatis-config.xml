@@ -2,5 +2,15 @@
 <!DOCTYPE configuration
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+	<mappers>
+		<mapper resource="first/project/movie/member/dao/MemberLogin.xml" />		
+		<mapper resource="first/project/movie/movieinfo/dao/movieMapper.xml" />
+		<mapper resource="first/project/movie/news/dao/newsMapper.xml" />
+		<mapper resource="first/project/movie/review/dao/reviewMapper.xml" />
+		<mapper resource="first/project/movie/mypage/dao/mypageFAQ.xml" />
+		<!--<mapper resource="first/project/movie/movieinfo/dao/moviePlayMapper.xml" />
+		<mapper resource="first/project/movie/room/dao/RoomMapper.xml" />
+		<mapper resource="first/project/movie/ticket/dao/Ticket.xml" />	 -->		
+	</mappers>
 </configuration>
 

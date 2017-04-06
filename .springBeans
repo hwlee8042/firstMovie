@@ -7,14 +7,16 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
-		<config>src/main/webapp/WEB-INF/spring/applicationContext.xml</config>
 		<config>src/main/resources/mybatis-config.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/customContext/custom-Context.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/adminContext/admin-Context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/customContext/memberContext.xml</config>
 	</configs>
 	<autoconfigs>
-		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/adminContext/newsContext.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/adminContext/moviePlayContext.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/customContext/reviewContext.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/adminContext/admin-Context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/customContext/custom-Context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/customContext/faqContext.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
