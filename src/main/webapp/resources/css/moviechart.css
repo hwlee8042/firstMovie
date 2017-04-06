@@ -1,0 +1,196 @@
+@CHARSET "UTF-8";
+
+#moviechart-wrap{
+	width: 960px;
+	height: auto;
+	margin: 50px auto 80px;
+	position: relative;
+}
+
+.movie-list {
+	float: left;
+	margin-bottom: 20px;
+}
+
+.movie-list li{
+	float: left;
+	margin-right: 6px;
+	width: 185px;
+	height: auto;
+	border: 1px solid #e5e5e5; 
+}
+.movie-list li:last-of-type{
+	margin-right: 0;
+}
+	/*list-box*/
+.movie-list li .list-box{
+	
+}
+.movie-list li .list-box .boxoffice{
+	position: absolute;
+	left: -2px; top: -2px;
+	text-indent: -9999em;
+	width: 33px; height: 36px;
+}
+.movie-list li .list-box .num1{
+	display: block;
+	background-image: url(../images/contents/n1.png);
+	background-repeat: no-repeat;	
+}
+.movie-list li .list-box .num2{
+	display: block;
+	position: absolute;
+	left: 20%; top: -2px;
+	margin-left: -1px;
+	background-image: url(../images/contents/n2.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num3{
+	display: block;
+	position: absolute;
+	left: 40%; top: -2px;
+	background-image: url(../images/contents/n3.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num4{
+	display: block;
+	position: absolute;
+	left: 60%; top: -2px;
+	margin-left: 1px;
+	background-image: url(../images/contents/n4.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num5{
+	position: absolute;
+	left: 80%; top: -2px;
+	margin-left: 1px;
+	display: block;
+	background-image: url(../images/contents/n5.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num6{
+	display: block;
+	position: absolute;
+	left:-2px; top: 30%;
+	margin-top: 34px;
+	background-image: url(../images/contents/n6.png);
+	background-repeat: no-repeat;	
+}
+.movie-list li .list-box .num7{
+	display: block;
+	position: absolute;
+	left: 20%; top: 30%;
+	margin-top: 34px;
+	margin-left: -1px;
+	background-image: url(../images/contents/n7.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num8{
+	display: block;
+	position: absolute;
+	left: 40%; top: 30%;
+	margin-top: 34px;
+	background-image: url(../images/contents/n8.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num9{
+	display: block;
+	position: absolute;
+	left: 60%; top: 30%;
+	margin-top: 34px;
+	margin-left: 1px;
+	background-image: url(../images/contents/n9.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-box .num10{
+	position: absolute;
+	left: 80%; top: 30%;
+	margin-top: 34px;
+	margin-left: 1px;
+	display: block;
+	background-image: url(../images/contents/n10.png);
+	background-repeat: no-repeat;
+}
+
+
+
+.movie-list li .list-box .list-poster{
+	display:block;
+	width: 185px; height: 260px;
+}
+.movie-list li .list-box .list-poster a img{
+	display:block;
+	width: 185px; height: 260px;
+	background-color: #000;
+}
+
+	/*list-text*/
+.movie-list li .list-text{
+	
+}
+.movie-list li .list-text dt{
+	padding: 10px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.movie-list li .list-text dt a{
+	display: inline-block;
+	font-family: "nanumB";
+	font-size: 1.2em;
+	color: #5a5b5b;
+}
+.movie-list li .list-text dt a .age{
+	display: inline-block;
+	text-indent: -9999em;
+	
+}
+.movie-list li .list-text dt a .age_12{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_12.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-text dt a .age_15{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_15.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-text dt a .age_19{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_19.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-text dt a .age_all{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_all.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-text dt a .age_no{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_no.png);
+	background-repeat: no-repeat;
+}
+.movie-list li .list-text dd{
+	padding: 10px;
+	font-family: "nanum";
+	font-size: 13px;
+	color: #5a5b5b;
+}
+
+	/*더보기 버튼*/
+.more-Bt{
+	position: absolute;
+	left: 0; bottom: 0;
+	width: 960px;
+	height: auto;
+	margin-bottom: -50px;
+}
+#moreBt{
+	width: 960px;
+	background-color: #ccc;
+	border-radius: 10px;
+	font-family: "nanumB";
+	font-size: 1.2em;
+	line-height: 1.8em;
+	padding: 5px 0;
+	color: #5a5b5b;
+}
+

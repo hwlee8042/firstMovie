@@ -1,0 +1,115 @@
+.review-wrap{
+	width: 960px;
+	height: 900px;
+	margin: 0 auto	;
+}
+.r_main{
+	width: 960px;
+	height: 100px;
+	
+}
+
+.r_main div{
+	float: left;
+}
+.r_profile{
+	text-align: center;
+	width: 90px;
+	height: 56px;
+	padding-left: 5px;
+}
+.r_profile img{
+	padding-top: 10px;
+	width: 56px;
+	height: 56px;
+}
+.r_writer{
+	border: 1px solid #bbb;
+}
+.r_score{
+	width: 180px;
+	border-right: 1px solid #bbb;
+	text-align: center;
+	height: 90px;
+}
+.r_comment{
+	width: 570px;
+	height: 90px;
+	border-right: 1px solid #bbb;
+}
+.r_comment textarea{
+	width: 565px;
+	height: 85px;
+   	resize: none;
+   	line-height: 1.7em;
+   	font-size: 12px;
+	font-family: "nanum";
+   	overflow: auto;
+   	overflow-x: hidden;
+}
+.r_regist{
+	width: 96px;
+	height: 90px;
+}
+.r_regist input{
+	width: 96px;
+	height: 90px;
+}
+#li{
+	width: 860px;
+	float: left;
+}
+.r_list{
+	padding: 10px;
+	width: 960px;
+	height: 110px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+.rlist_profile{
+	float: left;
+	padding: 20px 0 0 25px;
+	width: 56px;
+	height: 56px;
+}
+.r_text{
+	float: left;
+	margin-left: 30px;
+	width: 800px;
+	height: 100px;
+}
+.r_text ul {
+	float: left;
+	width: 800px;
+	border: 1px solid blue;
+	vertical-align: bottom;
+}
+.r_text ul li {
+	float: left;
+	padding-right: 20px;
+	font-family: "nanumB" ,"Roboto", sans-serif;
+	font-size: 1.2em;
+	line-height: 20px;
+	color: #5a5b5b;
+}
+.r_text ul li:nth-of-type(2){
+	font-family: "nanum";
+	line-height: 20px;
+	font-size: 12px;
+}
+.r_text ul li:nth-of-type(3){
+	font-family: "nanum";
+	line-height: 20px;
+	font-size: 12px;
+	
+}
+
+.r_text p{
+	width: 800px; 
+	height: 80px;
+	margin-top: 26px;
+	font-fmaily: "nanum";
+	font-size: 1em;
+	color: #5a5b5b;
+	border: 1px solid green;	
+}

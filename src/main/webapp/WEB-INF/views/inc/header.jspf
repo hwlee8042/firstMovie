@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="lgoinID" value="${sessionScope.LoginID }" />
+
+<%@ include file="login.jspf"%>
+<script type="text/javascript">
+function check(){
+	alert("로그인을 해주세요");
+	location.href="login.do";
+}
+function logout(){
+	alert("로그아웃이 되었습니다.");
+	location.href="logout.do";
+}
+</script>
+<%@ include file="side-bar.jspf" %>
+<div id="headerwrap" class="cf">
+        <header id="header">
+            <dl class="top-menu">
+            	<c:choose>
+            		<c:when test="${LoginID eq null}">
+            			<dt class="hide">상단메뉴</dt>
+                		<dd class="login"><a href="#">로그인</a></dd>
+                		<dd><a href="signup.do">회원가입</a></dd>
+                		<dd><a href="#" onclick="check()">MY PAGE</a></dd>
+                		<dd><a href="news_list.do">공지/뉴스</a></dd>
+            		</c:when>
+                	<c:when test="${LoginID eq 'admin'}">
+                		<dt class="hide">상단메뉴</dt>
+                		<dd><a href="#" onclick="logout()">로그아웃</a></dd>                	
+                		<dd><a href="movie_listpage.mdo">MY PAGE</a></dd>
+                		<dd><a href="manager_page_list.mdo">공지/뉴스</a></dd>
+                	</c:when>
+                	<c:otherwise>
+                		<dt class="hide">상단메뉴</dt>
+                		<dd><a href="#" onclick="logout()">로그아웃</a></dd>                	
+                		<dd><a href="login.do">MY PAGE</a></dd>
+                		<dd><a href="news_list.do">공지/뉴스</a></dd>
+                	</c:otherwise>
+                </c:choose>
+            </dl>
+            <h1 class="logo1"><a href="main.do"><img src="${pageContext.request.contextPath}/resources/images/header/logo1.png" alt="1'st MOVIE"></a></h1>
+            <h2 class="logo2_h"><a href="main.do"><img src="${pageContext.request.contextPath}/resources/images/header/logo2.png" alt="1'st movie"></a></h2>
+      	      <ul class="gnb">
+                <li class="gnblist gnb-movie">
+                    <a class="gnblink" href="moviechart.do">
+                    	영화
+                    	<ul class="sub-gnb movie-ul">
+                        	<li><a href="moviechart.do">뮤비차트</a></li>
+                        	<li><a href="#">평점</a></li>
+                    	</ul>
+                    </a>
+                </li>
+                <li class="gnblist"><a class="gnblink" href="ticketing.do">예매</a></li>
+                <li class="gnblist gnb-theater">
+                    <a class="gnblink" href="theater.do">
+                    	극장
+                    	<ul class="sub-gnb theater-ul">
+                        	<li><a href="theater.do">극장소개</a></li>
+                        	<li><a href="theater2.do">시설안내</a></li>
+                        	<li><a href="theater3.do">오시는 길</a></li>
+                    	</ul>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        
+    </div>
+    

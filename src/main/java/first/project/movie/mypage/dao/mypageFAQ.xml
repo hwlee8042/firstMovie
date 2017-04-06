@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="first.project.movie.mypage.dao.FaqDAO">
+	<!-- 글쓰기 등록 -->
+	<insert id="insertFaq" parameterType="first.project.movie.mypage.model.FaqVO">
+		insert into FAQ(faq_num, faq_category, faq_sub, faq_id, faq_content)
+		values (
+			faq_seq.nextval,
+			#{faq_category},
+			#{faq_sub},
+			#{faq_id},
+			#{faq_content}
+		)
+	</insert>
+	<!--DB의 리스트 불러오기 -->
+	<select id="custom_list" resultType="first.project.movie.mypage.model.FaqVO">
+		select faq_num, faq_category, faq_sub, faq_regdate, faq_status
+		from FAQ
+		where faq_num > 0
+		order by faq_num desc, faq_regdate desc
+	</select>
+	<!-- 글 보기 -->
+	<select id="get_faq" resultType="first.project.movie.mypage.model.FaqVO">
+		select faq_num, faq_category, faq_sub, faq_content
+		from FAQ
+		where faq_num = #{faq_num}
+	</select>
+	<!-- 글수정 -->
+	<update id="update_faq" parameterType="first.project.movie.mypage.model.FaqVO">
+		update FAQ set faq_category=#{faq_category} , faq_sub=#{faq_sub} , faq_content=#{faq_content} 
+		where faq_num = #{faq_num}
+	</update>
+	<!-- 글삭제 -->
+	<delete id="delete_faq" parameterType="first.project.movie.mypage.model.FaqVO">
+		delete from FAQ where faq_num = #{faq_num} 
+	</delete>
+	
+</mapper>

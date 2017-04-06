@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+
+#custom{
+	width : 960px;
+	height: 800px;	
+	position : relative;
+	margin : 20px auto;
+	
+}
+.submenu{
+	position:absolute;
+	top:0; left:0;
+	width:20%;
+	height:auto;
+}
+.submenu h3{
+	font-family: "nanumB";
+	font-size:1.3em;
+	padding: 5px 0;
+	border-bottom:1px solid #000;
+}
+.submenu ul{
+
+}
+.submenu li{
+	text-align:left;
+	margin: 10px 0;
+}
+.submenu li a{
+	display:bolck;
+	font-family: "nanumB";
+	font-size:1em;
+}
+/* 내용 부분*/
+.article{
+	position:absolute;
+	top: 20px; right:0;
+	width: 79%;
+	height:auto;
+	
+}
+.article h3{
+	font-family: "nanumB";
+	font-size:1.3em;
+	padding: 10px 0;
+	border-bottom:1px solid #000;
+}
+
+#add{
+	margin:auto;
+	float:right;
+	border-radius: 15%;
+}
+
+.delete{
+	border: 2px solid blue;
+	margin:10%;
+}

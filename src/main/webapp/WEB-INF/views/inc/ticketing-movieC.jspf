@@ -1,0 +1,174 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>영화선택</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/import.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body>
+	<div id="ticketing-movieC-wrap">
+		<div class="movieC-modal">
+			<div class="movieC-header">
+				<h3 class="movieC-logo">모든영화</h3>
+				<div class="ticketing-btn">
+					<button type="button" class="cancelBt t-btn">취소</button>
+					<button type="button" class="okBt t-btn">확인</button>
+				</div>
+			</div>
+			<ul class="movieC-topMenu">
+				<li><a href="#">예매율순</a></li>
+				<li><a href="#">가나다순</a></li>
+				<li><a href="#">개봉일순</a></li>
+			</ul>
+			<div class="movieC">
+				<!-- 첫번째 줄 -->	
+				<ul class="selectMovie cf">
+					<li>
+						<a href="#" class="border">
+							<span class="blind">너의 이름은</span>
+						</a>
+						<div class="movieC-poster">
+							<img src="${pageContext.request.contextPath}/resources/images/ticketing/poster/poster_1.png" alt="너의 이름은 포스터">
+						</div>
+						<div class="title">
+							<p class="title" title="더킹">
+								<span class="age age_15">15세 관람가</span>
+								너의 이름은
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind">로그원</span>
+						</a>
+						<div class="movieC-poster">
+							<img src="${pageContext.request.contextPath}/resources/images/ticketing/poster/poster_3.png" alt="로그원 포스터">
+						</div>
+						<div class="title">
+							<p class="title" title="로그원">
+								<span class="age age_12">12세 관람가</span>
+								로그원
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+				</ul>
+				
+				<!-- 2번쨰 줄 -->
+				<ul class="selectMovie  cf">
+					<li>
+						<a href="#" class="border">
+							<span class="blind">마스터</span>
+						</a>
+						<div class="movieC-poster">
+							<img src="${pageContext.request.contextPath}/resources/images/ticketing/poster/poster_2.png" alt="마스터 포스터">
+						</div>
+						<div class="title">
+							<p class="title" title="마스터">
+								<span class="age age_15">15세 관람가</span>
+								마스터
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="border">
+							<span class="blind"></span>
+						</a>
+						<div class="movieC-poster">
+							<img src="" alt="">
+						</div>
+						<div class="title">
+							<p class="title" title="">
+								<span class="age "></span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="${pageContext.request.contextPath}/resources/js/main.js" type="text/javascript"></script>
+</body>
+</html>

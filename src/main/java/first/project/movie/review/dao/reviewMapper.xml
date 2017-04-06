@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="first.project.movie.review.dao.ReviewDAO">		
+	
+	<insert id="create">
+		insert into review(rno, movie_number, rid, score, rcomment) 
+		values(review_seq.nextval, #{movie_number}, #{rid}, #{score}, #{rcomment})
+	</insert>
+	<update id="update">
+		update review set rcomment=#{rcomment}, score=#{score}, insdate=sysdate
+		where rno=#{rno}
+	</update>
+	<update id="delete">
+		update status=1
+		where rno={#rno}
+	</update>
+	<select id="list" resultType="first.project.movie.review.model.ReviewVO">
+		select rid, rcomment, insdate, score
+		from review
+		where movie_number = 1 and status = 0
+		order by rno desc
+	</select>
+</mapper>

@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/import.css" />
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/manager2.css" />
+<div class="admin-side-wrapper cf">
+	<ul class="admin-side-list">
+		<li><a href="manager_now.jsp">현황관리</a>
+		<li><a href="manager_member.jsp">회원관리</a>
+		<li class="movie"><a href="#"> 영화관리
+				<ul class="movie-addmenu">
+					<li><a href="manager_movie_add.mdo">등록</a></li>
+					<li><a href="movie_listpage.mdo">수정</a></li>
+					<li><a href="#">삭제</a></li>
+				</ul>
+		</a></li>
+		<li><a href="manager_play.jsp">상영시간관리</a>
+		<li><a href="manager_place.jsp">상영관관리</a> <!-- 상영관 등록 수정 삭제 -->
+		<li><a href="manager_page.jsp">페이지관리</a> <!-- 메인페이지배너, 이벤트페이지 관리 -->
+		<li><a href="manager_chart.jsp">통계</a>
+		<li><a href="manager_admin,jsp">관리자계정관리</a>
+	</ul>
+</div>

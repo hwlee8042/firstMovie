@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 회원관련 -->
+	<bean id="memberController" class="first.project.movie.member.controller.MemberController" p:memberService-ref="memberService"/>
+	<bean id="memberService" class="first.project.movie.member.service.MemberServiceImpl" p:memberDAO-ref="memberDAO"/>
+	<bean id="memberDAO" class="first.project.movie.member.dao.MemberDAOImpl" p:sqlSession-ref="sqlSessionTemplate"/>
+	<bean id="memberVO" class="first.project.movie.member.model.MemberVO"/> 
+	
+	<!--  메일인증 -->
+	<bean id="mailController" class="first.project.movie.mail.controller.MailController" p:mailService-ref="mailService"/>
+	<bean id="mailService" class="first.project.movie.mail.service.MailServiceImpl" p:javaMailSender-ref="javaMailSender"/>
+	
+</beans>

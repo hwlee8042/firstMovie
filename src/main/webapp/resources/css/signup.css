@@ -1,0 +1,99 @@
+#signupWrap {
+    margin:auto;
+    width : 940px;
+    height : auto;
+}
+
+ul.sign_top_nav{
+    margin: 10px 0;
+    float : right;
+}
+.sign_top_nav li{
+    float : left;
+    margin-left : 10px;
+}
+.sign_top_nav li a{
+    display : block;
+    color : #939393;
+}
+
+.line {
+    border-bottom: 1px solid #ccc;
+}
+
+
+.signup_logo {
+    margin : 20px 0;
+    font-family:"nanumB";
+    font-size: 1.5em;
+    color : #4c4c4c;
+}
+.signup_logo span {
+    display : inline-block;
+    font-size : 0.8em;
+    color : #bbb;
+}
+
+
+.sign_up_h3{
+    font-size : 1em;
+    color : #939393;
+}
+
+.join_table{
+    margin : 30px 0;
+    border-top: 5px solid #bbb;
+    border-bottom: 5px solid #bbb;
+}
+
+.join_table tr{
+    line-height: 4em;
+}
+
+.join_table tr th{
+    border-right : 2px solid #bbb;
+}
+
+.join_table tr th label{
+    color : #4c4c4c;
+}
+.join_table td{
+    padding-left : 10px;
+}
+.join_table td span{
+    color : #939393;
+}
+
+#signup_button{
+    text-align: center;
+    margin-bottom : 50px;
+}
+#signup_button button {
+    padding : 10px 90px;
+    font-family: "nanumB";
+    font-size : 1.2em;
+    border-radius : 10px;
+    background-color : #f4d98f;
+    color : #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

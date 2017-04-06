@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	
+<mapper namespace="first.project.movie.news.dao.NewsDAO">
+
+	<insert id="create">
+		insert into news(no, title, category, content)
+		values(news_seq.nextval,#{title},#{category},#{content})
+	</insert>
+	<select id="read" resultType="first.project.movie.news.model.NewsVO">
+		select no, title, category, content, regdate, viewcnt
+		from news
+		where no = #{no}
+	</select>
+	<update id="hit">
+		update news set viewcnt=viewcnt+1
+		where no=#{no}
+	</update>
+	<update id="update">
+		update news set title=#{title}, category=#{category}, content=#{content}
+		where no=#{no}
+	</update>
+	
+	<delete id="delete">
+		delete from news where no = #{no}
+	</delete>
+	<select id="manager_List" resultType="first.project.movie.news.model.NewsVO">
+	<![CDATA[
+	select no, category, title, regdate, viewcnt
+	from news
+	where no > 0
+	order by no desc, regdate desc
+	]]>
+	</select>
+	<select id="member_List" resultType="first.project.movie.news.model.NewsVO">
+	<![CDATA[
+	select no, category, title, regdate, viewcnt
+	from news
+	where no > 0
+	order by no desc, regdate desc
+	]]>
+	</select>
+</mapper>

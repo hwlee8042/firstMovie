@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 	<bean id="movieController" class="first.project.movie.movieinfo.controller.MovieController" p:movieService-ref="movieService"/>
+	<bean id="movieService" class="first.project.movie.movieinfo.service.MovieServiceImpl" p:movieDAO-ref="movieDAO"/>
+	<bean id="movieDAO" class="first.project.movie.movieinfo.dao.MovieDAOImpl" p:sqlSession-ref="sqlSessionTemplate"/>
+	<bean id="movieVO" class="first.project.movie.movieinfo.model.MovieVO"/>
+	
+	<bean id="newsController" class="first.project.movie.news.controller.NewsController" p:newsService-ref="newsService"/>
+	<bean id="newsService" class="first.project.movie.news.service.NewsServiceImpl" p:newsDAO-ref="newsDAO"/>
+	<bean id="newsDAO" class="first.project.movie.news.dao.NewsDAOImpl" p:sqlSession-ref="sqlSessionTemplate"/>
+	<bean id="newsVO" class="first.project.movie.news.model.NewsVO"/>
+</beans>

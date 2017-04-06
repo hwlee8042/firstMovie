@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/import.css">
+<div id="custom">
+	<div class="submenu cf">
+		<h3>마이 페이지</h3>
+
+		<ul>
+			<li><a href="reservation.do">예매 내역</a></li>
+			<li><a href="comment.do">한줄평</a></li>
+			<li><a href="faq.do">Q & A</a></li>
+			<li><a href="modified.do">정보 수정</a></li>
+			<li><a href="delete.do">회원 탈퇴</a></li>
+
+		</ul>
+	</div>
+</div>

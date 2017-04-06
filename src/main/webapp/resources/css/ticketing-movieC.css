@@ -1,0 +1,156 @@
+@CHARSET "UTF-8";
+
+#ticketing-movieC-wrap{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 10;
+}
+
+.movieC-modal{
+	position:absolute;
+	left: 50%; top: 0;
+	opacity: 0;
+	width: 960px;
+	height: 500px;
+	margin-left: -480px;
+	margin-top: -250px;
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.movieC-modal.showTC{
+	top: 50%;
+	opacity: 1;
+}
+
+.movieC-modal .movieC-logo{
+	font-family: "nanumB";
+	font-size: 25px;
+	color: #0d4983;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 10px 10px 0 0;
+	border-bottom: 2px solid #e5e5e5;
+}
+.movieC-modal .ticketing-btn{
+	position: absolute;
+	right: 52px; top: 25px;
+}
+.ticketing-btn .t-btn{
+	margin-left: 10px;
+}
+.ticketing-btn .cancelBt{
+	text-indent: -9999px;
+	width: 68px; height: 30px;
+	background-image: url(../images/ticketing/button/cancel_bt1.png);
+	background-repeat: no-repeat;
+}
+.ticketing-btn .cancelBt:hover{
+	background-image: url(../images/ticketing/button/cancel_hover.png);
+	background-repeat: no-repeat;
+}
+.ticketing-btn .okBt{
+	text-indent: -9999px;
+	width: 68px; height: 30px;
+	background-image: url(../images/ticketing/button/confirm_bt1.png);
+	background-repeat: no-repeat;
+}
+.ticketing-btn .okBt:hover{
+	background-image: url(../images/ticketing/button/confirm_hover.png);
+	background-repeat: no-repeat;
+}
+
+.movieC-topMenu{
+	position: absolute;
+	right: 52px; top:88px;
+}
+.movieC-topMenu li{
+	float: left;
+	margin-left: 10px;
+	padding-left: 10px;
+	background-image: url(../images/header/tmenu-bar.png); 
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+.movieC-topMenu li:first-of-type {
+	margin-left: 0;
+	padding-left: 0;
+	background: none;
+}
+.movieC-topMenu li a{
+	font-family: "nanum";
+	font-size: 13px;
+	color: #474747;
+}
+.movieC{
+	position: absolute;
+	left: 10px; top: 116px;
+	width:930px;
+	height: 350px;
+	overflow: auto;
+	border: 2px solid #e5e5e5;
+}
+.selectMovie{
+	width: 100%;
+	height: 282px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.selectMovie li{
+	float: left;
+}
+.selectMovie li .border{
+	display: block;
+	position: absolute;
+	left: 1px; top: 1px;
+	width: 177px;
+	height: 280px;
+	border-right: 1px solid #e5e5e5;
+}
+.selectMovie li .border .blind{
+	display: block;
+	position: absolute;
+	left: -1000em; top: -10000em;
+	overflow: hidden;
+}
+.selectMovie li .movieC-poster{
+	width: 177px; height: 256px;
+	margin-left: 1px;
+}
+.selectMovie li .title{
+	margin-left: 2px;
+	padding: 2px 0;
+}
+.selectMovie li .title .age{
+	display: inline-block;
+	text-indent: -9999em;
+}
+.selectMovie li .title .age_12{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_12.png);
+	background-repeat: no-repeat;
+}
+.selectMovie li .title .age_15{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_15.png);
+	background-repeat: no-repeat;
+}
+.selectMovie li .title .age_19{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_19.png);
+	background-repeat: no-repeat;
+}
+.selectMovie li .title .age_all{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_all.png);
+	background-repeat: no-repeat;
+}
+.selectMovie li .title .age_no{
+	width: 18px; height: 18px;
+	background-image: url(../images/movie_age/age_no.png);
+	background-repeat: no-repeat;
+}
+
+

@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+#manager {
+	width : 960px;
+	height: 1000px;	
+	position : relative;
+	margin : 20px auto;
+}
+
+.admin-side-wrapper{
+	position: absolute;
+	top: 0; left:0;
+	width : 20%;
+	height: auto;	
+}
+.aside-left ul{
+	
+}
+
+.admin-side-list li{
+	text-align:left;
+	margin: 10px 0;
+}
+.admin-side-list li a{
+	display:block;
+	font-family: "nanumB";
+	font-size: 1em;
+}
+.admin-main{
+	position : absolute;
+	top : 0; right:0;
+	width : 79%;
+	height : auto;
+}
+.admin-main h3{
+	font-family: "nanumB";
+	font-size: 1.3em;
+	padding: 10px 0;
+	border-bottom: 1px solid #000; 
+}
+.admin-main p {
+	font-family: "nanum";
+	font-size: 0.98em;
+}
+button#add{
+	float: right;
+}
+button#add2{
+	float: right;
+	margin-right: 50%;
+}
+#add3{
+	float: left;
+	margin-left: 27%;
+	width: 100px;
+}
+#canclebutton{
+	float: left;
+	margin-left: 27%;
+	width: 100px;
+}
+#savebutton{
+	float: left;
+	margin-left: 27%;
+	width: 100px;
+}
+#content{
+	width: 95%;
+}
+#modifybutton{
+	float: left;
+	margin-left: 27%;
+	width: 100px;
+}

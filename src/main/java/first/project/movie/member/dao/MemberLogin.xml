@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="first.project.movie.member.dao.MemberDAO">
+
+	<resultMap type="first.project.movie.member.dao.MemberDAO"
+		id="MemberResultMap">
+		<result property="id" column="MEMBER_ID" jdbcType="VARCHAR" />
+		<result property="pw" column="MEMBER_PW" jdbcType="VARCHAR" />
+		<result property="name" column="MEMBER_NAME" jdbcType="VARCHAR" />
+		<result property="gender" column="MEMBER_GENDER" jdbcType="VARCHAR" />
+		<result property="birth" column="MEMBER_BIRTH" jdbcType="DATE" />
+		<result property="phone" column="MEMBER_PHONE" jdbcType="VARCHAR" />
+		<result property="email" column="MEMBER_EMAIL" jdbcType="VARCHAR" />
+		<result property="regdate" column="MEMBER_REGDATE" jdbcType="DATE" />
+		<result property="check" column="MEMBER_CHECK" jdbcType="INTEGER" />
+	</resultMap>
+
+	<select id="selectMember" parameterType="java.lang.String"
+		resultType="first.project.movie.member.model.MemberVO">
+		
+        <![CDATA[select * from MEMBER where MEMBER_ID = #{id}]]>
+        
+	</select>
+	<insert id="memberInsert" parameterType="hashMap">
+	
+		<![CDATA[insert into
+		member(member_id, member_pw, member_name,
+		member_gender, member_birth, member_phone,
+		member_email)
+		values(#{id},
+		#{pw},
+		#{name},
+		#{gender},
+		#{birth},
+		#{phone},
+		#{email})]]>
+	
+	</insert>
+	<!--  이메일 인증 완료 -->
+	<update id="joinCheck" parameterType="String">
+		update member set member_check = 1 where  member_id =#{id}
+	</update>
+	<!-- 아이디 중복 체크 -->
+	<select id="memberCheck" parameterType="String" resultType="String">
+		<![CDATA[select member_id from member where member_id = #{id}]]>
+	</select>
+
+	<!-- 회원 탈퇴 -->
+	<delete id="memberDelete" parameterType="first.project.movie.member.model.MemberVO">
+		<![CDATA[delete from member where member_id =#{member_id} and member_pw = #{member_pw}]]>
+	</delete>
+	
+	<!-- 정보 수정 -->
+	<update id="memberUpdate" parameterType="hashMap">
+		<![CDATA[update member set member_pw = #{member_pw}, member_phone =#{member_phone} , member_email=#{member_email} where member_id = #{member_id}]]>
+	</update>
+</mapper>

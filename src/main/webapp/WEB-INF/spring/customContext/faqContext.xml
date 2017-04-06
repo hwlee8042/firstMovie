@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- VO -->
+	<bean id="faqVO" class="first.project.movie.mypage.model.FaqVO" />
+	<!-- DAO -->
+	<bean id="faqDAO" class="first.project.movie.mypage.dao.FaqDAOImpl" p:sqlSession-ref="sqlSessionTemplate" />
+	<!-- Service -->
+	<bean id="faqService" class="first.project.movie.mypage.service.FaqServiceImpl" p:faqDAO-ref="faqDAO"/>
+	<!-- Controller -->
+	<bean id="faqController" class="first.project.movie.mypage.controller.FaqController" p:faqService-ref="faqService" />
+	
+	
+</beans>
